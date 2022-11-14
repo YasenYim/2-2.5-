@@ -16,7 +16,7 @@ namespace _2_2._5_面向对象属性和单例
         // 用属性可以简单实现只读
         public int attack { get; private set; }
 
-        private int _def;
+        private int _def;  // 这里设置成私有是保存真正的防御力的
         public int def { 
             // Console.WriteLine(def)    //  get
             // int abc = def;            //  get
@@ -54,7 +54,7 @@ namespace _2_2._5_面向对象属性和单例
         {
             this.name = name;
             this.hp = hp;
-            this.attack = 1;
+            this.attack = Utils.Instance.RandomNum(1,100);
             this.def = 0;
         }
 
